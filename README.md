@@ -43,6 +43,4 @@ export default MyComponent;
 An object with the following properties:
 
 -   **model:** An Object {value, onChange}
--   displayValue: The transformed value for display.
--   onChange: The function to handle the change event.
 -   **value:** The current state value.
