@@ -1,10 +1,11 @@
 {
 	"name": "use-vmodel-react",
-	"version": "1.0.1",
+	"version": "1.1.0",
 	"description": "A React hook that provides two-way binding similar to Vue's v-model, with customizable pre and post-processing of values.",
 	"main": "lib/index.js",
+	"types": "lib/index.d.ts",
 	"scripts": {
-		"build": "babel src --out-dir lib --extensions \".js\" --copy-files",
+		"build": "tsc",
 		"prepublishOnly": "npm run build"
 	},
 	"repository": {
@@ -28,9 +29,8 @@
 	},
 	"homepage": "https://github.com/RPCapital/use-v-model-react#readme",
 	"devDependencies": {
-		"@babel/cli": "^7.23.4",
-		"@babel/core": "^7.23.6",
-		"@babel/preset-env": "^7.23.6",
-		"babel-loader": "^9.1.3"
+		"@types/react": "^18.2.45",
+		"@types/react-dom": "^18.2.18",
+		"typescript": "^5.3.3"
 	}
 }
