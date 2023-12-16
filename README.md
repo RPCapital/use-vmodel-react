@@ -20,7 +20,7 @@ function MyComponent() {
 	return (
 		<div>
 			<label>Email:</label>
-			<input type="text" {...email} />
+			<input type="text" {...email.model} />
 			<p>Displayed Value: {email.displayValue}</p>
 		</div>
 	);
@@ -31,10 +31,10 @@ export default MyComponent;
 
 # API
 
-## `useVModel(initialValue, preProcess, postProcess, displayTransformer)`
+## `useVModel(initialValue, {preProcess, postProcess, displayTransformer})`
 
 -   **initialValue:** The initial value for the state.
--   **preProcess:** A function to run before updating the state. Receives the current value and an `updateState` callback.
+-   **preProcess:** A function to run before updating the state. Receives the current value and an `updateState` callback. ex. (value, update) => update(value.toUppercase())
 -   **postProcess:** A function to run after updating the state.
 -   **displayTransformer:** A function to transform the displayed value.
 
@@ -42,6 +42,7 @@ export default MyComponent;
 
 An object with the following properties:
 
+-   **model:** An Object {value, onChange}
+-   displayValue: The transformed value for display.
+-   onChange: The function to handle the change event.
 -   **value:** The current state value.
--   **displayValue:** The transformed value for display.
--   **onChange:** The function to handle the change event.

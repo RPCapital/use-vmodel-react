@@ -14,9 +14,11 @@ interface UseVModelOptions<T> {
 }
 
 interface UseVModelResult<T> {
-	value: T;
+	model: {
+		value: T;
+		onChange: (e: ChangeEvent<HTMLInputElement>) => void;
+	};
 	displayValue: any;
-	onChange: (e: ChangeEvent<HTMLInputElement>) => void;
 }
 
 function useVModel<T>(
@@ -40,9 +42,11 @@ function useVModel<T>(
 	const displayValue = displayTransformer(value);
 
 	return {
-		value,
+		model: {
+			onChange: handleChange,
+			value,
+		},
 		displayValue,
-		onChange: handleChange,
 	};
 }
 
