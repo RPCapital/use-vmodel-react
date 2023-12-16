@@ -1,6 +1,6 @@
 {
 	"name": "use-vmodel-react",
-	"version": "1.1.1",
+	"version": "1.1.2",
 	"description": "A React hook that provides two-way binding similar to Vue's v-model, with customizable pre and post-processing of values.",
 	"main": "lib/index.js",
 	"types": "lib/index.d.ts",
