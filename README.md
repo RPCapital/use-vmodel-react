@@ -38,6 +38,28 @@ export default MyComponent;
 -   **postProcess:** A function to run after updating the state.
 -   **displayTransformer:** A function to transform the displayed value.
 
+# Example
+
+```js
+const email = useVModel("default@email.com", {
+	preProcess: (val, callback) => {
+		console.log("preProcess", val);
+		if (val.includes("$")) {
+			return;
+		}
+		callback(val.toLowerCase());
+	},
+	postProcess: (val) => {
+		if (val.includes("!")) {
+			console.error("Invalid email");
+		}
+	},
+	displayTransformer: (val) => {
+		return val.toUpperCase() + "!";
+	},
+});
+```
+
 ## Returns
 
 An object with the following properties:
