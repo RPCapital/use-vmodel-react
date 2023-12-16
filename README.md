@@ -34,9 +34,9 @@ export default MyComponent;
 ## `useVModel(initialValue, {preProcess, postProcess, displayTransformer})`
 
 -   **initialValue:** The initial value for the state.
--   **preProcess:** A function to run before updating the state. Receives the current value and an `updateState` callback. ex. (value, update) => update(value.toUppercase())
--   **postProcess:** A function to run after updating the state.
--   **displayTransformer:** A function to transform the displayed value.
+-   **preProcess:** A function to run before updating the state. Receives the current value and an `updateState` callback. ex. (value, update) => update(value.toUppercase()). (Default: Returns value)
+-   **postProcess:** A function to run after updating the state. (Default: undefined)
+-   **displayTransformer:** A function to transform the displayed value. (Default: Returns value)
 
 # Example
 
@@ -65,4 +65,4 @@ const email = useVModel("default@email.com", {
 An object with the following properties:
 
 -   **model:** An Object {value, onChange}
--   **value:** The current state value.
+-   **displayValue:** The transformed value returned by the displayTransformer
