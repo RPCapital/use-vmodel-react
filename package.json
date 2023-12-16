@@ -9,7 +9,7 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/RPCapital/use-v-model-react.git"
+		"url": "git+https://github.com/RPCapital/use-vmodel-react.git"
 	},
 	"keywords": [
 		"react",
